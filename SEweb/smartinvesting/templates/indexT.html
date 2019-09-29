@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<title>Smart Investing</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body background="https://cypherbits.net/wp-content/uploads/2019/04/bannernoticias22.jpg" class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="https://www.levelaccess.com/wp-content/uploads/2017/09/Blog_icon_financial_1.png" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#news" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>NEWS</p>
+  </a>
+  <a href="#cal" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>CALCULATE</p>
+  </a>
+  <!-- <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a> -->
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#top" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#news" class="w3-bar-item w3-button" style="width:25% !important">NEWS</a>
+    <a href="#cal" class="w3-bar-item w3-button" style="width:25% !important">CALCULATE</a>
+    <!-- <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a> -->
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="top">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">Smart</span> Investing.</h1>
+    <p>We are investment consultants.</p>
+    <img src="https://brandinside.asia/wp-content/uploads/2018/07/shutterstock_4758081643Fa3.jpg" alt="boy" class="w3-image" width="992" height="1108">
+    <!-- <h1 class="w3-jumbo"><span class="w3-hide-small">Register</span></h1>
+    <div>
+        <form action="/action_page.php" target="_blank">
+            <p>E-Mail</p>
+            <p><input class="w3-input w3-border" type="text" placeholder="E-Mail" name="mail" required></p>
+            
+            <p>Password</p>
+            <p><input class="w3-input w3-border" type="password" placeholder="Password" name="pass" required></p>
+
+            <p>Re-Password</p>
+            <p><input class="w3-input w3-border" type="password" placeholder="Re-Password" name="repass" required></p>
+
+            <button type="submit" class="w3-button w3-block w3-black">Send</button>
+        </form>
+    </div> -->
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="news">
+    <h2 class="w3-text-light-grey">Inves NewsTo day</h2>
+    <hr style="width:200px" class="w3-opacity"> 
+    <div>
+      <table style="width:100%"> 
+        <!-- <tr>
+          <th>news</th>
+          <th>news</th>
+          <th>news</th>
+        </tr> -->
+        <tr>
+          <td colspan="2">หัวข้อข่าว</td>
+          
+          <td><a href="">อ่านต่อ</a></td>
+        </tr>
+        <!-- <tr>
+          <td>news</td>
+          <td>news</td>
+          <td>news</td>
+        </tr>
+        <tr>
+          <td>news</td>
+          <td>news</td>
+          <td>news</td>
+        </tr>
+        <tr>
+          <td>news</td>
+          <td>news</td>
+          <td>news</td>
+        </tr>
+        <tr>
+          <td>news</td>
+          <td>news</td>
+          <td>news</td>
+        </tr>
+        <tr>
+          <td>news</td>
+          <td>news</td>
+          <td>news</td>
+        </tr> -->
+      </table>
+    </div>
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="cal"  >
+    <h2 class="w3-text-light-grey">Calculate Model</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- form กรอกข้อมูล -->
+    <div style="width: 45%">
+        <form action='/cal/' method="POST">
+          {% csrf_token %}
+            <p>เลือกประเภทหุ้น</p>
+            <p><input class="w3-input w3-border" type="text" placeholder="select set50" name="set50" required></p>
+            <p>ตั้งแต่</p>
+            <p><input class="w3-input w3-border" type="date" placeholder="Sday" name="Sday" required></p>
+            <p>จนถึง</p>
+            <p><input class="w3-input w3-border" type="date" placeholder="Lday" name="Lday" required></p>
+            <button type="submit" class="w3-button w3-block w3-gray">Send</button>
+        </form>
+    </div>
+
+  </div>
+
+  <!-- Contact Section -->
+  <!-- <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Ubon, TH</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 06 44305025</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: </p>
+    </div><br>
+    <p>Lets get in touch. Send me a message:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  
+  </div> -->
+  <!-- End Contact Section -->
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
