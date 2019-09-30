@@ -1,4 +1,4 @@
-git <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <title>Smart Investing</title>
 <meta charset="UTF-8">
@@ -127,7 +127,28 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         <form action='/cal/' method="POST">
           {% csrf_token %}
             <p>เลือกประเภทหุ้น</p>
-            <p><input class="w3-input w3-border" type="text" placeholder="select set50" name="set50" required></p>
+            <p>
+              <select>
+                <option selected="">หมวดธุรกิจ </option>
+                <option value="1">เทคโนโลยีสารสนเทศและการสื่อสาร</option>
+                <option value="2">ขนส่งและโลจิสติกส์</option>
+                <option value="3">พลังงานและสาธารณูปโภค</option>
+                <option value="4">ธนาคาร</option>
+                <option value="5">การแพทย์</option>
+                <option value="6">พาณิชย์</option>
+                <option value="7">อาหารและเครื่องดื่ม</option>
+                <option value="8">พัฒนาอสังหาริมทรัพย์</option>
+                <option value="9">ชิ้นส่วนอิเล็กทรอนิกส์</option>
+                <option value="10">ปิโตรเคมีและเคมีภัณฑ์</option>
+                <option value="11">เงินทุนและหลักทรัพย์</option>
+                <option value="12">วัสดุก่อสร้าง</option>
+              </select>
+            </p>
+            <p>
+              <select>
+                <option selected="">บริษัท</option>
+              </select>
+            </p>
             <p>ตั้งแต่</p>
             <p><input class="w3-input w3-border" type="date" placeholder="Sday" name="Sday" required></p>
             <p>จนถึง</p>
